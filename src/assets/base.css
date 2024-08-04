@@ -1,0 +1,72 @@
+/* Определение переменных для шрифтов и цветов */
+:root {
+  --main-blue: #002992;
+  --blue-rgb: 0, 41, 146;
+  --dark-blue: #293554;
+  --t-gray: #272727;
+  --black: #000000;
+  --white: #FFFFFF;
+  --light-gray: #8B8B8B;
+  --yellow: #FFE248;
+  --yellow-rgba: rgba(255, 226, 72, 0.4);
+  --main-gradient: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,36,130,1) 52%, rgba(0,41,146,1) 100%);
+
+  --roboto-light: "Roboto Light";
+  --weight-light: 300;
+  
+  --roboto-regular: "Roboto Regular";
+  --weight-regular: 400;
+  
+  --roboto-medium: "Roboto Medium";
+  --weight-medium: 500;
+  
+  --roboto-bold: "Roboto Bold";
+  --weight-bold: 700;
+  
+  --roboto-black: "Roboto Black";
+  --weight-black: 900;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("@/assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("@/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("@/assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("@/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("@/assets/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
