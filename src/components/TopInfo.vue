@@ -107,4 +107,13 @@ export default {
   color: var(--main-blue);
   text-decoration: none;
 }
+@media (max-width: 480px) {
+  .top-info-wrapper {
+    width: 480px;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+    text-align: center;
+  }
+}
 </style>
