@@ -28,4 +28,9 @@ export default {
   border: 1px solid var(--t-gray);
   margin-top: 63px;
 }
+@media screen {
+  .map-container {
+    width: 90vw;
+  }
+}
 </style>

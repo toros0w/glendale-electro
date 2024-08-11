@@ -40,6 +40,11 @@ export default {
 .input-wrapper {
   margin-top: 19px;
 }
+.input-title .text-title {
+  font-family: var(--roboto-regular);
+  color: var(--t-gray);
+  font-weight: var(--weight-regular);
+}
 .small-input {
   width: 618px;
   height: 42px;
@@ -61,5 +66,30 @@ export default {
 }
 .btn-with-bg-send {
   margin-top: 25px;
+}
+@media (max-width: 700px) {
+  .send-message-title {
+    font-size: 6vw;
+  }
+  .send-message-wrapper {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .send-message-container {
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-input {
+    width: 100%;
+  }
+  .small-input {
+    width: 100%;
+  }
 }
 </style>

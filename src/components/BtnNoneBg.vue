@@ -133,4 +133,11 @@ export default {
   background-color: var(--white);
   color: var(--main-blue);
 }
+@media (max-width: 480px) {
+  .btn-with-bg-send {
+    width: 105px;
+    height: 22px;
+    font-size: 14px;
+  }
+}
 </style>
