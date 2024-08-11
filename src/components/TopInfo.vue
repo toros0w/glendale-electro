@@ -20,7 +20,10 @@
             <a class="contact-phone" href="tel:+2348100112233">+1 (414) 929-0919</a>
           </div>
         </div>
-        <BtnNoneBg btnText="Request A Service" />
+        <BtnNoneBg cls="btn-none-bg" btnText="Request A Service" />
+        <a class="call-us-href" href="tel:+2348100112233">
+          <BtnNoneBg cls="btn-none-bg-mobile" btnText="Call Us Now" />
+        </a>
       </div>
     </div>
   </div>
@@ -37,6 +40,12 @@ export default {
 </script>
 
 <style scoped>
+.btn-none-bg-mobile {
+  display: none;
+}
+.call-us-href {
+  text-decoration: none;
+}
 .top-info-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -108,12 +117,47 @@ export default {
   text-decoration: none;
 }
 @media (max-width: 480px) {
+  .top-info-container {
+    width: 430px;
+    display: flex;
+    justify-content: center;
+  }
   .top-info-wrapper {
-    width: 480px;
-    justify-content: space-between;
+    width: 430px;
     height: 65px;
     align-items: center;
     text-align: center;
+  }
+  .top-logo {
+    align-items: center;
+  }
+  .logo-text {
+    font-size: 16px;
+  }
+  .address-wrapper {
+    display: none;
+  }
+  .contact-wrapper {
+    display: none;
+  }
+  .gps-icon {
+    display: none;
+  }
+
+  .mobile-icon {
+    display: none;
+  }
+  .top-info-right {
+    gap: 10px;
+  }
+  .btn-none-bg {
+    display: none;
+  }
+  .btn-none-bg-mobile {
+    display: none;
+    width: 160px;
+    height: 30px;
+    font-size: 14px;
   }
 }
 </style>

@@ -41,4 +41,30 @@ export default {
 .offer-item-text {
   margin-top: 22px;
 }
+@media (max-width: 480px) {
+  .offer-item {
+    max-height: 220px;
+  }
+  .offer-icon {
+    max-width: 60px;
+    max-height: 60px;
+    margin-top: 20px;
+  }
+  .offer-item-title {
+    font-size: 20px;
+  }
+  .offer-item-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1300px) {
+  .offer-item {
+    width: 100vw;
+    height: 100%;
+  }
+  .offer-item {
+    max-height: auto;
+  }
+}
 </style>

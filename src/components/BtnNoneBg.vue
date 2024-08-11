@@ -39,6 +39,40 @@ export default {
   background-color: var(--main-blue);
   color: var(--white);
 }
+.btn-none-bg-mobile {
+  border: 2px solid var(--white);
+  color: var(--white);
+  position: absolute;
+  right: 15px;
+  font-family: var(--roboto-bold);
+  font-weight: var(--weight-bold);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 152px;
+  height: 25px;
+  transition: background-color 0.5s cubic-bezier(0, 0.19, 0.05, 0.46);
+  cursor: pointer;
+}
+.btn-none-bg-yellow-mobile {
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+  font-family: var(--roboto-medium);
+  font-weight: var(--weight-medium);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 105px;
+  height: 22px;
+  transition: background-color 0.5s cubic-bezier(0, 0.19, 0.05, 0.46);
+  cursor: pointer;
+  padding: 4px 2px;
+  left: 15px;
+}
 
 .btn-none-bg-yellow {
   border: 2px solid var(--yellow);

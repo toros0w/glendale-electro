@@ -58,4 +58,10 @@ export default {
   gap: 84px;
   margin-top: 40px;
 }
+
+@media (max-width: 480px) {
+  .recent-container {
+    display: none;
+  }
+}
 </style>

@@ -2,9 +2,12 @@
   <div class="preview-container">
     <div class="preview-wrapper">
       <div class="preview-content">
-        <div class="preview-title">{{ post.title }}</div>
+        <div class="content-wrapper-mobile">
+          <div class="preview-title">{{ post.title }}</div>
+          <img src="/images/post-photo.png" alt="" class="preview-img-mobile" />
+        </div>
         <div class="preview-text">{{ post.text }}</div>
-        <BtnNoneBg btnText="Read More..." cls="btn-with-bg" />
+        <BtnNoneBg btnText="Read More..." cls="btn-with-bg mobile" />
       </div>
     </div>
     <img src="/images/post-photo.png" alt="" class="preview-img" />
@@ -28,6 +31,16 @@ export default {
 </script>
 
 <style scoped>
+.preview-img-mobile {
+  display: none;
+  width: 152px;
+  height: 130px;
+  box-shadow: 3px 4px 29px -6px rgba(0, 0, 0, 0.53);
+  border-radius: 10px;
+}
+.content-wrapper-mobile {
+  display: flex;
+}
 .preview-container {
   max-width: 1200px;
   display: flex;
@@ -72,5 +85,41 @@ export default {
   height: 345px;
   box-shadow: 3px 4px 29px -6px rgba(0, 0, 0, 0.53);
   border-radius: 10px;
+}
+@media (max-width: 480px) {
+  .preview-container {
+    max-width: 430px;
+    display: flex;
+    justify-content: center;
+  }
+  .preview-content {
+    width: 400px;
+  }
+  .preview-title {
+    font-size: 26px;
+    max-width: 265px;
+    align-items: center;
+  }
+  .preview-text {
+    font-size: 18px;
+    line-height: 20px;
+    width: 350px;
+  }
+  .preview-img {
+    display: none;
+  }
+  .preview-img-mobile {
+    display: flex;
+  }
+  .content-wrapper-mobile {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .btn-with-bg.mobile {
+    width: 105px;
+    height: 22px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
 }
 </style>

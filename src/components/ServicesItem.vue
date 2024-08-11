@@ -57,4 +57,32 @@ export default {
 .item-btn-icon {
   margin-right: 14px;
 }
+@media (max-width: 480px) {
+  .service-item {
+    width: 191px;
+    height: 138px;
+  }
+  .item-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    display: flex;
+    height: 33px;
+    width: 100%;
+    background: rgba(var(--blue-rgb), 0.8);
+    color: var(--white);
+    font-size: 12px;
+    font-family: var(--roboto-bold);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.5px;
+  }
+  .item-btn-icon {
+    width: 17px;
+    height: 17px;
+  }
+  .item-img {
+    width: 191px;
+    height: 137px;
+  }
+}
 </style>

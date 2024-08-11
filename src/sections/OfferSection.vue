@@ -72,4 +72,28 @@ export default {
   justify-content: space-between;
   margin-top: 80px;
 }
+@media (max-width: 480px) {
+  .offer-container {
+    max-width: 430px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .offer-items-wrapper {
+    flex-wrap: wrap;
+
+    display: flex;
+    justify-content: center;
+  }
+  .offer-title {
+    font-size: 24px;
+  }
+  .offer-subtitle {
+    font-size: 18px;
+    width: 340px;
+    margin-left: 45px;
+    margin-top: 15px;
+  }
+}
 </style>

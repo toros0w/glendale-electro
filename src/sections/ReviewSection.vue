@@ -58,4 +58,19 @@ export default {
   gap: 84px;
   margin-top: 35px;
 }
+@media (max-width: 480px) {
+  .review-container {
+    width: 430px;
+  }
+  .review-title {
+    font-size: 24px;
+  }
+  .review-items-wrapper {
+    flex-wrap: wrap;
+    gap: 30px;
+
+    display: flex;
+    justify-content: center;
+  }
+}
 </style>

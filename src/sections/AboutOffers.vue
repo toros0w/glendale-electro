@@ -57,4 +57,28 @@ export default {
   justify-content: space-between;
   margin-top: 80px;
 }
+
+@media (max-width: 1300px) {
+  .offer-container {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .offer-items-wrapper {
+    justify-content: center;
+    gap: 0.1vw;
+  }
+}
+@media (max-width: 750px) {
+  .offer-container {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .offer-items-wrapper {
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+  }
+}
 </style>

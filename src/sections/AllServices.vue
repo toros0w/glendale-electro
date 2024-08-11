@@ -94,5 +94,27 @@ export default {
 .item {
   margin-top: 10px;
 }
+@media (max-width: 480px) {
+  .all-services-container {
+    width: 430px;
+    height: 480px;
+    margin-top: 100px;
+  }
+  .services-wrapper {
+    gap: 10px;
+  }
+  .all-services-title {
+    font-size: 24px;
+  }
+  .all-services-subtitle {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .items {
+    font-size: 12px;
+  }
+}
 </style>
 

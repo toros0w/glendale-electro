@@ -24,4 +24,9 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 480px) {
+  div {
+    max-width: 430px;
+  }
+}
 </style>

@@ -50,4 +50,21 @@ export default {
   justify-content: center;
   margin-top: 71px;
 }
+
+@media (max-width: 480px) {
+  .our-services-container {
+    width: 430px;
+  }
+  .services-title {
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .service-item-wrapper {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
 </style>

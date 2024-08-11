@@ -48,4 +48,13 @@ export default {
   font-size: 64px;
   text-transform: uppercase;
 }
+@media screen {
+  .second-header-container {
+    width: 100vw;
+    height: auto;
+  }
+  .second-head-title {
+    font-size: 4vw;
+  }
+}
 </style>

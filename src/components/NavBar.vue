@@ -7,18 +7,32 @@
         <router-link to="/about" class="navbar-item">About</router-link>
         <router-link to="/contact" class="navbar-item">Contact Us</router-link>
       </div>
-      <img src="/icons/bx_search.svg" alt="" class="search-btn" />
+      <BurgerComponent class="burger" />
+      <BtnNoneBg class="btn-none-bg-mobile" btnText="Request A Service" />
     </div>
   </div>
 </template>
 
 <script>
+import BtnNoneBg from '@/components/BtnNoneBg.vue'
+import BurgerComponent from '@/components/BurgerComponent.vue'
+
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  components: {
+    BurgerComponent,
+    BtnNoneBg
+  }
 }
 </script>
 
 <style scoped>
+.burger {
+  visibility: hidden;
+}
+.btn-none-bg-mobile {
+  visibility: hidden;
+}
 .navbar-wrapper {
   display: flex;
   width: 100vw;
@@ -65,5 +79,23 @@ export default {
 }
 .search-btn:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+  .navbar-items {
+    visibility: hidden;
+  }
+  .burger {
+    display: flex;
+    visibility: inherit;
+  }
+  .btn-none-bg-mobile {
+    visibility: inherit;
+  }
+}
+@media (max-width: 1300px) {
+  .navbar-container {
+    width: 100%;
+  }
 }
 </style>

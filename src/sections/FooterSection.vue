@@ -14,6 +14,12 @@
           electro@mailservice.com <br />
           +2348100112233
         </div>
+        <div class="social-items mobile">
+          <img src="/icons/facebook.svg" alt="" class="social-item" />
+          <img src="/icons/twitter.svg" alt="" class="social-item" />
+          <img src="/icons/instagram.svg" alt="" class="social-item" />
+          <img src="/icons/google.svg" alt="" class="social-item" />
+        </div>
       </div>
       <div class="footer-explore">
         <div class="explore-title">Explore</div>
@@ -101,6 +107,11 @@ export default {
   margin-left: 10px;
   margin-top: 45px;
   line-height: 30px;
+}
+.social-items.mobile {
+  display: none;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 .footer-explore {
   margin-top: 32px;
@@ -192,5 +203,32 @@ export default {
   font-size: 24px;
   margin-top: 45px;
   margin-bottom: 11px;
+}
+@media (max-width: 480px) {
+  .footer-explore {
+    display: none;
+  }
+  .footer-socials {
+    display: none;
+  }
+  .footer-container {
+    max-width: 430px;
+    min-height: 350px;
+  }
+  .footer-info {
+    margin-left: 30px;
+  }
+  .logo-text {
+    font-size: 18px;
+  }
+  .info-text {
+    font-size: 16px;
+  }
+  .info-contacts {
+    font-size: 16px;
+  }
+  .social-items.mobile {
+    display: flex;
+  }
 }
 </style>
