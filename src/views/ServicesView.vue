@@ -1,7 +1,8 @@
 <template>
   <div class="container">
+    <MobileMenu :isOpen="isMenuOpen" @close="toggleMenu" />
     <TopInfo />
-    <NavBar class="nav" />
+    <NavBar class="nav" @toggle="toggleMenu" />
     <SecondHeader :headInfo="headData" />
     <OurServices />
     <OfferSection />
@@ -13,6 +14,7 @@
 <script>
 import TopInfo from '@/components/TopInfo.vue'
 import NavBar from '@/components/NavBar.vue'
+import MobileMenu from '@/components/MobileMenu.vue'
 import SecondHeader from '@/components/SecondHeader.vue'
 import OurServices from '@/sections/OurServices.vue'
 import FooterSection from '@/sections/FooterSection.vue'
@@ -23,6 +25,7 @@ export default {
   components: {
     TopInfo,
     NavBar,
+    MobileMenu,
     SecondHeader,
     FooterSection,
     OurServices,
@@ -34,7 +37,13 @@ export default {
       headData: {
         img: './images/ServicesBg.jpg',
         title: 'Services'
-      }
+      },
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
     }
   }
 }
