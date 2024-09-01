@@ -24,6 +24,7 @@ import OfferSection from '@/sections/OfferSection.vue'
 import RecentSection from '@/sections/RecentSection.vue'
 import ReviewSection from '@/sections/ReviewSection.vue'
 import FooterSection from '@/sections/FooterSection.vue'
+import axios from 'axios'
 
 export default {
   name: 'IndexView',
@@ -44,9 +45,26 @@ export default {
       isMenuOpen: false
     }
   },
+  mounted() {
+    this.checkAuth()
+  },
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen
+    },
+    checkAuth() {
+      axios
+        .get('https://dev.electriciansoflosangeles.com/api/auth/check')
+        .then((response) => {
+          if (response.data.status === 'success') {
+            this.isAuthorized = true
+          } else {
+            this.isAuthorized = false
+          }
+        })
+        .catch((error) => {
+          console.error('Error checking authorization:', error)
+        })
     }
   }
 }
@@ -55,7 +73,6 @@ export default {
 <style scoped>
 .container {
   min-width: 1300px;
-  position: relative;
   transition: filter 0.3s ease-in-out;
 }
 .mobile-menu-wrapper.open ~ .container {

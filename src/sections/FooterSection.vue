@@ -7,7 +7,8 @@
           <div class="logo-text">GLENDALE ELECTRICIANS</div>
         </div>
         <div class="info-text">
-          With over 8 years experience in the industry, adipiscing elit. Tortor vel posuere
+          With 20 years of experience, we deliver trusted electrical solutions. Let our expertise
+          light the way for you.
         </div>
         <div class="info-contacts">
           0012, Chiranci Street Kano, Nigeria <br />
@@ -105,7 +106,7 @@ export default {
   font-weight: var(--weight-regular);
   font-size: 18px;
   margin-left: 10px;
-  margin-top: 45px;
+  margin-top: 40px;
   line-height: 30px;
 }
 .social-items.mobile {
@@ -213,7 +214,10 @@ export default {
   }
   .footer-container {
     max-width: 430px;
-    min-height: 350px;
+    min-height: 380px;
+  }
+  .logo-icon {
+    margin-left: 10px;
   }
   .footer-info {
     margin-left: 30px;

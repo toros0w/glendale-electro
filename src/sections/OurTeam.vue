@@ -2,7 +2,7 @@
   <div class="team-container">
     <div class="team-title">Our Team</div>
     <div class="team-subtitle">
-      Meat our professional team members who are ever ready and up to the task of assisting you
+      Meet our professional team members who are ever ready and up to the task of assisting you
     </div>
     <div class="team-wrapper">
       <TeamItem v-for="(user, index) in teamData" :key="index" :teamData="user" />
@@ -23,22 +23,22 @@ export default {
         {
           photo: './images/team-1.jpg',
           title: 'Electrician',
-          name: 'Jack Wilshere'
+          name: 'Vahe Vardanyan'
         },
         {
           photo: './images/team-2.jpg',
-          title: 'Wirin Technician',
-          name: 'Jack Wilshere'
+          title: 'Wiring Technician',
+          name: 'Jack Williams'
         },
         {
           photo: './images/team-3.jpg',
           title: 'Service Manager',
-          name: 'Jack Wilshere'
+          name: 'John Bruno'
         },
         {
           photo: './images/team-4.jpg',
           title: 'Accountant',
-          name: 'Jack Wilshere'
+          name: 'Nancy Davis'
         }
       ]
     }

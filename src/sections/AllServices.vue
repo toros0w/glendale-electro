@@ -34,7 +34,8 @@ export default {
         'Landscape Lighting',
         'Exhaust Fans',
         'Smoke Detectors',
-        'Home Theater Installation'
+        'Home Theater Installation',
+        'And more...'
       ],
       commercial: [
         'Telecom Installation and Repair',
@@ -46,7 +47,8 @@ export default {
         'Motors and Transformers',
         'Isolated Computer Circuits',
         'Data/Communications Cabling',
-        'Ballast/Lamp Replacing'
+        'Ballast/Lamp Replacing',
+        'And more...'
       ]
     }
   }

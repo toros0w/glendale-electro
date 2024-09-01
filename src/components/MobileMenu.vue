@@ -48,12 +48,12 @@ export default {
   position: fixed;
   top: 0;
   left: -70vw;
-  background-color: var(--white);
+  background-color: var(--t-gray);
   z-index: 100;
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--light-gray);
+  border-right: 1px solid var(--white);
 }
 
 .mobile-menu-wrapper.open {
@@ -66,7 +66,7 @@ export default {
   top: 1px;
   background: none;
   border: none;
-  color: var(--main-blue);
+  color: var(--white);
   font-size: 30px;
   cursor: pointer;
 }
@@ -74,7 +74,7 @@ export default {
 .mobile-menu-items {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 35px;
   text-align: center;
   justify-content: center;
 }
@@ -89,9 +89,10 @@ export default {
   font-weight: var(--weight-regular);
   font-size: 18px;
   text-transform: uppercase;
-  color: var(--main-blue);
+  color: var(--white);
+  background-color: var(--t-gray);
   transition: background-color 0.3s ease;
   text-decoration: none;
-  box-shadow: 0px 10px 0px -9px rgba(0, 0, 0, 0.37);
+  border-bottom: 1px solid var(--white);
 }
 </style>
