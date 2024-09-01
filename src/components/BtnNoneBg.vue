@@ -44,8 +44,8 @@ export default {
   color: var(--white);
   position: absolute;
   right: 15px;
-  font-family: var(--roboto-bold);
-  font-weight: var(--weight-bold);
+  font-family: var(--roboto-medium);
+  font-weight: var(--weight-medium);
   font-size: 14px;
   display: flex;
   justify-content: center;
@@ -55,6 +55,7 @@ export default {
   height: 25px;
   transition: background-color 0.5s cubic-bezier(0, 0.19, 0.05, 0.46);
   cursor: pointer;
+  line-height: 1.5;
 }
 .btn-none-bg-yellow-mobile {
   border: 2px solid var(--yellow);

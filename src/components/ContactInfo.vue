@@ -2,7 +2,8 @@
   <div class="contact-info-container">
     <div class="info-title">Contact Info</div>
     <div class="info-text">
-      With over 8 years experience in the industry, adipiscing elit. Tortor vel posuere
+      Get in touch with us for prompt and professional assistance. Whether by phone or email, we're
+      here to help with all your electrical needs.
     </div>
     <div class="info-address">
       0012, Chiranci Street Kano, Nigeria <br />

@@ -19,17 +19,17 @@ export default {
         {
           img: './icons/note.svg',
           title: 'Free Estimation',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vel posuere'
+          text: 'We offer free estimates to give you transparent pricing and expert advice from the start.'
         },
         {
           img: './icons/clock.svg',
           title: '24/7 Available',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vel posuere'
+          text: 'We are available 24/7 to handle all your electrical emergencies and needs promptly.'
         },
         {
           img: './icons/wallet.svg',
           title: 'Affordable Prices',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vel posuere'
+          text: 'We offer competitive pricing to ensure you receive high-quality electrical services at an excellent value.'
         }
       ]
     }

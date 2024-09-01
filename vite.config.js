@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/electro/', // Укажите базовый URL
+  base: '/', // Укажите базовый URL
   plugins: [
     vue(),
     vueJsx(),

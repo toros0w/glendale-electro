@@ -9,6 +9,13 @@
         <router-link to="/contact" class="navbar-item">Contact Us</router-link>
       </div>
       <BurgerComponent class="burger" @toggle="toggleMenu" />
+      <div class="info-section">
+        <img src="/icons/mobile-white.svg" alt="" class="mobile-icon" />
+        <div class="contact-wrapper">
+          <a class="contact-phone" href="tel:+2348100112233">+1 (414) 929-0919</a>
+          <div class="contact-text">Call Us Anytime</div>
+        </div>
+      </div>
       <BtnNoneBg class="btn-none-bg-mobile" btnText="Request A Service" />
     </div>
   </div>
@@ -40,6 +47,9 @@ export default {
   height: 48px;
   justify-content: space-between;
   color: var(--white);
+}
+.info-section {
+  display: none;
 }
 
 .navbar-container {
@@ -88,6 +98,30 @@ export default {
   .burger,
   .btn-none-bg-mobile {
     display: block;
+  }
+  .info-section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+    margin-right: 180px;
+    font-family: var(--roboto-regular);
+    font-weight: var(--weight-regular);
+    gap: 5px;
+  }
+  .mobile-icon {
+    width: 20px;
+    height: 30px;
+  }
+  .contact-text {
+    color: var(--light-gray);
+    font-size: 8px;
+    text-align: right;
+  }
+  .contact-phone {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
   }
 }
 

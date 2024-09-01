@@ -3,7 +3,8 @@
     <div class="offer-title">WE OFFER</div>
     <div class="offer-subtitle">
       We offer a comprehensive range of cost effective services for residential and commercial
-      properties.
+      properties. Book your free estimate today and experience our expert electrical services
+      firsthand!
     </div>
     <div class="offer-items-wrapper">
       <OfferItem v-for="(item, index) in data" :key="index" :offer="item" />
@@ -93,6 +94,8 @@ export default {
     font-size: 18px;
     width: 340px;
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>
