@@ -92,6 +92,32 @@ export default {
 }
 
 @media (max-width: 480px) {
+  .info-section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+    margin-right: 180px;
+    font-family: var(--roboto-regular);
+    font-weight: var(--weight-regular);
+    gap: 5px;
+  }
+  .mobile-icon {
+    width: 20px;
+    height: 30px;
+  }
+  .contact-text {
+    color: var(--light-gray);
+    font-size: 8px;
+    text-align: right;
+  }
+  .contact-phone {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
   .navbar-items {
     display: none;
   }
@@ -128,6 +154,12 @@ export default {
 @media (max-width: 1300px) {
   .navbar-container {
     width: 100%;
+  }
+}
+@media (max-width: 1400px) {
+  .navbar-container {
+    padding: 0 20px 0 20px;
+
   }
 }
 </style>
