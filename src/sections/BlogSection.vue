@@ -1,24 +1,30 @@
 <template>
-  <div v-if="sectionData.position == 'left'" class="blog-section-left-img">
-    <div class="img-wrapper">
-      <img :src="sectionData.url" alt="" class="left-img" />
-    </div>
-    <div class="left-content-wrapper">
-      <div v-if="sectionData?.title" class="left-title">{{ sectionData.title }}</div>
-      <div class="left-text">{{ sectionData.text }}</div>
+  <div class="section-wrapper">
+    <div v-if="sectionData.position == 'left'" class="blog-section-left-img">
+      <div class="img-wrapper">
+        <img :src="sectionData.url" alt="" class="left-img" />
+      </div>
+      <div class="left-content-wrapper">
+        <div v-if="sectionData?.title" class="left-title">{{ sectionData.title }}</div>
+        <div class="left-text">{{ sectionData.text }}</div>
+      </div>
     </div>
   </div>
-  <div v-if="sectionData.position == 'middle'" class="blog-section-no-photo">
-    <div v-if="sectionData?.title" class="middle-title">{{ sectionData.title }}</div>
-    <div class="middle-text">{{ sectionData.text }}</div>
-  </div>
-  <div v-if="sectionData.position == 'right'" class="blog-section-right-img">
-    <div class="right-content-wrapper">
-      <div v-if="sectionData?.title" class="right-title">{{ sectionData.title }}</div>
-      <div class="right-text">{{ sectionData.text }}</div>
+  <div class="section-wrapper">
+    <div v-if="sectionData.position == 'middle'" class="blog-section-no-photo">
+      <div v-if="sectionData?.title" class="middle-title">{{ sectionData.title }}</div>
+      <div class="middle-text">{{ sectionData.text }}</div>
     </div>
-    <div class="img-wrapper">
-      <img :src="sectionData.url" alt="" class="right-img" />
+  </div>
+  <div class="section-wrapper">
+    <div v-if="sectionData.position == 'right'" class="blog-section-right-img">
+      <div class="right-content-wrapper">
+        <div v-if="sectionData?.title" class="right-title">{{ sectionData.title }}</div>
+        <div class="right-text">{{ sectionData.text }}</div>
+      </div>
+      <div class="img-wrapper">
+        <img :src="sectionData.url" alt="" class="right-img" />
+      </div>
     </div>
   </div>
 </template>
@@ -47,7 +53,6 @@ export default {
 .left-content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: end;
 }
 .left-title {
   font-family: var(--roboto-bold);
@@ -74,7 +79,7 @@ export default {
 .left-text {
   margin-top: 15px;
   max-width: 900px;
-  text-align: right;
+  text-align: left;
   height: auto;
   font-family: var(--roboto-regular);
   font-weight: var(--weight-regular);
@@ -142,5 +147,30 @@ export default {
   font-weight: var(--weight-regular);
   font-size: 16px;
   line-height: 23px;
+}
+
+@media (max-width: 1400px) {
+  .section-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 1300px) {
+  .blog-section-right-img,
+  .blog-section-left-img {
+    gap: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .blog-section-right-img,
+  .blog-section-left-img {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .img-wrapper {
+    max-width: 600px;
+    height: 400px;
+  }
 }
 </style>

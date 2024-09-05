@@ -41,16 +41,19 @@ export default {
 }
 .img-wrapper {
   max-width: 257px;
-  max-height: 257px;
+  height: 257px;
   overflow: hidden;
+  position: relative;
 }
 
 .post-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .btn-with-bg.mobile {
   width: 122px;
