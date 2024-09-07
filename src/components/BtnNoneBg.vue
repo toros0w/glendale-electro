@@ -134,6 +134,30 @@ export default {
   background-color: var(--white);
   color: var(--main-blue);
 }
+.request-btn-with-bg {
+  border: 2px solid var(--main-blue);
+  color: var(--white);
+  background-color: var(--main-blue);
+  font-family: var(--roboto-medium);
+  font-weight: var(--weight-medium);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 813px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 33px;
+  height: 50px;
+  transition: background-color 0.5s cubic-bezier(0, 0.19, 0.05, 0.46);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.request-btn-with-bg:hover {
+  background-color: var(--white);
+  color: var(--main-blue);
+}
 @media (max-width: 480px) {
   .btn-with-bg-send {
     width: 105px;
