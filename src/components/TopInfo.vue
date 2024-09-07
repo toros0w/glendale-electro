@@ -8,7 +8,8 @@
     <div class="top-info-container">
       <div class="top-logo">
         <img src="/images/electro-logo.svg" alt="logo" class="logo-img" />
-        <div class="logo-text">GLENDALE ELECTRICIANS</div>
+        <!-- <div class="logo-text">GLENDALE ELECTRICIANS</div> -->
+        <router-link to="/" class="logo-text">GLENDALE ELECTRICIANS</router-link>
       </div>
       <div class="top-info-right">
         <div class="info-section">
