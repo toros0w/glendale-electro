@@ -1,4 +1,9 @@
 <template>
+  <RequestModal
+    :isOpen="isRequestModalOpen"
+    @close-modal="closeRequestModal"
+    class="request-modal"
+  />
   <div class="navbar-wrapper">
     <div class="navbar-container">
       <div class="navbar-items">
@@ -16,7 +21,7 @@
           <div class="contact-text">Call Us Anytime</div>
         </div>
       </div>
-      <BtnNoneBg class="btn-none-bg-mobile" btnText="Request A Service" />
+      <BtnNoneBg class="btn-none-bg-mobile" btnText="Request A Service" @click="openRequestModal" />
     </div>
   </div>
 </template>
@@ -24,16 +29,35 @@
 <script>
 import BtnNoneBg from '@/components/BtnNoneBg.vue'
 import BurgerComponent from '@/components/BurgerComponent.vue'
+import RequestModal from '@/components/RequestModal.vue'
 
 export default {
   name: 'NavBar',
   components: {
     BurgerComponent,
-    BtnNoneBg
+    BtnNoneBg,
+    RequestModal
+  },
+  data() {
+    return {
+      isRequestModalOpen: false
+    }
   },
   methods: {
     toggleMenu() {
       this.$emit('toggle')
+    },
+    openRequestModal() {
+      this.isRequestModalOpen = true
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.overflow = 'hidden'
+      document.body.style.paddingRight = `${scrollBarWidth}px`
+    },
+    closeRequestModal() {
+      this.isRequestModalOpen = false
+      document.body.style.overflow = ''
+      document.body.style.paddingRight = ''
     }
   }
 }
@@ -159,7 +183,13 @@ export default {
 @media (max-width: 1400px) {
   .navbar-container {
     padding: 0 20px 0 20px;
-
   }
+}
+
+.request-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

@@ -1,4 +1,9 @@
 <template>
+  <RequestModal
+    :isOpen="isRequestModalOpen"
+    @close-modal="closeRequestModal"
+    class="request-modal"
+  />
   <div class="top-info-wrapper">
     <div class="top-info-container">
       <div class="top-logo">
@@ -20,7 +25,7 @@
             <a class="contact-phone" href="tel:+2348100112233">+1 (414) 929-0919</a>
           </div>
         </div>
-        <BtnNoneBg cls="btn-none-bg" btnText="Request A Service" />
+        <BtnNoneBg cls="btn-none-bg" btnText="Request A Service" @click="openRequestModal" />
         <a class="call-us-href" href="tel:+2348100112233">
           <BtnNoneBg cls="btn-none-bg-mobile" btnText="Call Us Now" />
         </a>
@@ -31,10 +36,31 @@
 
 <script>
 import BtnNoneBg from '@/components/BtnNoneBg.vue'
+import RequestModal from '@/components/RequestModal.vue'
 export default {
   name: 'TopInfo.vue',
   components: {
-    BtnNoneBg
+    BtnNoneBg,
+    RequestModal
+  },
+  data() {
+    return {
+      isRequestModalOpen: false
+    }
+  },
+  methods: {
+    openRequestModal() {
+      this.isRequestModalOpen = true
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.overflow = 'hidden'
+      document.body.style.paddingRight = `${scrollBarWidth}px`
+    },
+    closeRequestModal() {
+      this.isRequestModalOpen = false
+      document.body.style.overflow = ''
+      document.body.style.paddingRight = ''
+    }
   }
 }
 </script>
@@ -159,5 +185,12 @@ export default {
     height: 30px;
     font-size: 14px;
   }
+}
+
+.request-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

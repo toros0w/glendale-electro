@@ -1,20 +1,51 @@
 <template>
+  <RequestModal
+    :isOpen="isRequestModalOpen"
+    @close-modal="closeRequestModal"
+    class="request-modal"
+  />
   <div class="header-container">
     <div class="header-wrapper">
       <h1 class="header-title mobile">SAFE AND SECURE</h1>
       <p class="header-text mobile">We are a Service You Can Trust</p>
       <BtnNoneBg cls="btn-none-bg-yellow" btnText="Contact Us Now" />
-      <BtnNoneBg cls="btn-none-bg-yellow-mobile" btnText="Request a Service" />
+      <BtnNoneBg
+        cls="btn-none-bg-yellow-mobile"
+        btnText="Request a Service"
+        @click="openRequestModal"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import BtnNoneBg from '@/components/BtnNoneBg.vue'
+import RequestModal from '@/components/RequestModal.vue'
+
 export default {
   name: 'MainHeader',
   components: {
-    BtnNoneBg
+    BtnNoneBg,
+    RequestModal
+  },
+  data() {
+    return {
+      isRequestModalOpen: false
+    }
+  },
+  methods: {
+    openRequestModal() {
+      this.isRequestModalOpen = true
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.overflow = 'hidden'
+      document.body.style.paddingRight = `${scrollBarWidth}px`
+    },
+    closeRequestModal() {
+      this.isRequestModalOpen = false
+      document.body.style.overflow = ''
+      document.body.style.paddingRight = ''
+    }
   }
 }
 </script>
@@ -84,5 +115,12 @@ export default {
     top: 255px;
     left: 15px;
   }
+}
+
+.request-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
