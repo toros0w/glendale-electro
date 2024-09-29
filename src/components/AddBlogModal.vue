@@ -47,7 +47,7 @@ export default {
     },
     async createBlog() {
       try {
-        const response = await axios.post('https://dev.electriciansoflosangeles.com/api/posts', {
+        const response = await axios.post('https://electriciansoflosangeles.com/api/posts', {
           title: this.title,
           description: this.description,
           image: this.image
@@ -70,6 +70,7 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 100;
 }
 .title {
   font-family: var(--roboto-bold);

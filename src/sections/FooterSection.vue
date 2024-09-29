@@ -11,9 +11,9 @@
           light the way for you.
         </div>
         <div class="info-contacts">
-          0012, Chiranci Street Kano, Nigeria <br />
-          electro@mailservice.com <br />
-          +2348100112233
+          213 North Glendale Ave. Glendale, CA <br />
+          info@electriciansoflosangeles.com <br />
+          +1 (747) 218-3267
         </div>
         <div class="social-items mobile">
           <img src="/icons/facebook.svg" alt="" class="social-item" />
@@ -31,15 +31,15 @@
           <a href="#" class="explore-item">About us</a>
           <a href="#" class="explore-item">Projects</a>
           <a href="#" class="explore-item">Testimonial</a>
-          <a href="#" class="explore-item">FAQ</a>
+          <router-link to="/faq" class="explore-item">FAQ</router-link>
         </div>
       </div>
       <div class="footer-socials">
         <div class="newsletter">
           <div class="newsletter-title">Newsletter</div>
           <div class="newsletter-input-wrapper">
-            <input type="text" class="newsletter-input" />
-            <button class="newsletter-btn">Subscribe</button>
+            <input v-model="email" type="text" class="newsletter-input" />
+            <button @click="newsLetter" class="newsletter-btn">Subscribe</button>
           </div>
         </div>
         <div class="socials">
@@ -57,8 +57,32 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'FooterSection'
+  name: 'FooterSection',
+  data() {
+    return {
+      email: ''
+    }
+  },
+  methods: {
+    async newsLetter() {
+      try {
+        // https://electriciansoflosangeles.com
+        const response = await axios.post('https://electriciansoflosangeles.com/api/newsletter', {
+          email: this.email
+        })
+        if (response.data.status === true && response.data.data.message !== 'error') {
+          location.reload()
+        } else {
+          console.error('Request failed:', response.data.data.message)
+        }
+      } catch (error) {
+        console.error('Error sending request:', error)
+        console.error('Error details:', error.response.data.errors)
+      }
+    }
+  }
 }
 </script>
 
@@ -227,6 +251,7 @@ export default {
   }
   .info-text {
     font-size: 16px;
+    padding: 0 40px 0 0;
   }
   .info-contacts {
     font-size: 16px;

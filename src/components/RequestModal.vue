@@ -101,18 +101,15 @@ export default {
       this.formSubmitted = true // устанавливаем флаг при отправке формы
       if (this.isFormValid()) {
         try {
-          const response = await axios.post(
-            'https://dev.electriciansoflosangeles.com/api/request',
-            {
-              customer_name: this.customer_name,
-              customer_lastname: this.customer_lastname,
-              customer_phone: this.customer_phone,
-              customer_email: this.customer_email,
-              customer_street: this.customer_street,
-              customer_zipcode: this.customer_zipcode,
-              request_text: this.request_text
-            }
-          )
+          const response = await axios.post('https://electriciansoflosangeles.com/api/request', {
+            customer_name: this.customer_name,
+            customer_lastname: this.customer_lastname,
+            customer_phone: this.customer_phone,
+            customer_email: this.customer_email,
+            customer_street: this.customer_street,
+            customer_zipcode: this.customer_zipcode,
+            request_text: this.request_text
+          })
           if (response.data.status === true && response.data.data.message !== 'error') {
             this.closeRequestModal()
           } else {

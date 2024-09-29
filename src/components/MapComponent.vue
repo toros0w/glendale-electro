@@ -1,15 +1,15 @@
 <template>
   <div class="map-container">
     <iframe
-      src="https://my.atlist.com/map/16f5eadf-7339-42d4-a6ed-fccc6439808b/?share=true"
       width="100%"
       height="500px"
-      loading="lazy"
       frameborder="0"
-      scrolling="no"
+      style="border: 0"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCwNWzGM5rwcuYtKxzVK79h5a9SwxOCBzg&q=213+North+Glendale+Ave,+Glendale,+CA"
       allowfullscreen
-      id="atlist-embed"
-    ></iframe>
+    >
+    </iframe>
   </div>
 </template>
 

@@ -14,6 +14,9 @@
       <router-link class="router" to="/about" @click="closeMenu">
         <div class="mobile-menu-item">About</div>
       </router-link>
+      <router-link class="router" to="/faq" @click="closeMenu">
+        <div class="mobile-menu-item">FAQ</div>
+      </router-link>
       <router-link class="router" to="/contact" @click="closeMenu">
         <div class="mobile-menu-item">Contact Us</div>
       </router-link>

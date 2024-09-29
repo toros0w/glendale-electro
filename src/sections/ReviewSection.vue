@@ -60,7 +60,9 @@ export default {
 }
 @media (max-width: 480px) {
   .review-container {
-    width: 430px;
+    width: 380px;
+    justify-content: center;
+    padding: 0 0 0 35px;
   }
   .review-title {
     font-size: 24px;

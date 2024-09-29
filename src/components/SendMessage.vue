@@ -4,27 +4,59 @@
       <div class="send-message-title">Send Us a Message</div>
       <div class="input-wrapper">
         <div class="input-title">Full Name</div>
-        <input type="text" class="small-input" />
+        <input v-model="customer_name" type="text" class="small-input" />
       </div>
       <div class="input-wrapper">
         <div class="input-title">Email Address</div>
-        <input type="text" class="small-input" />
+        <input v-model="customer_email" type="text" class="small-input" />
       </div>
       <div class="input-wrapper">
         <div class="text-title">Message</div>
-        <textarea name="Message" id="" class="main-input"></textarea>
+        <textarea v-model="customer_message" name="Message" id="" class="main-input"></textarea>
       </div>
-      <BtnNoneBg cls="btn-with-bg-send" btnText="Send" />
+      <BtnNoneBg cls="btn-with-bg-send" btnText="Send" @click="sendMessage" />
     </div>
   </div>
 </template>
 
 <script>
 import BtnNoneBg from '@/components/BtnNoneBg.vue'
+import axios from 'axios'
 export default {
   name: 'SendMessage',
   components: {
     BtnNoneBg
+  },
+  data() {
+    return {
+      customer_name: '',
+      customer_email: '',
+      customer_message: '',
+      formSubmitted: ''
+    }
+  },
+  methods: {
+    async sendMessage() {
+      this.formSubmitted = true
+      try {
+        //REAL REQUEST TO DEV -  https://electriciansoflosangeles.com/api/message
+        const response = await axios.post('https://electriciansoflosangeles.com/api/message', {
+          customer_name: this.customer_name,
+          customer_email: this.customer_email,
+          customer_message: this.customer_message
+        })
+        if (response.data.status === true && response.data.data.message !== 'error') {
+          location.reload()
+        } else {
+          console.error('Request failed:', response.data.data.message)
+        }
+      } catch (error) {
+        console.error('Error sending request:', error)
+        if (error.response && error.response.data && error.response.data.errors) {
+          console.error('Error details:', error.response.data.errors)
+        }
+      }
+    }
   }
 }
 </script>

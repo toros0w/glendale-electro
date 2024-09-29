@@ -59,7 +59,7 @@ export default {
     },
     async getPosts() {
       try {
-        const response = await axios.get('https://dev.electriciansoflosangeles.com/api/posts')
+        const response = await axios.get('https://electriciansoflosangeles.com/api/posts')
         this.posts = response.data
       } catch (error) {
         console.error('Error fetching posts', error)
@@ -79,7 +79,7 @@ export default {
     },
     async checkAuth() {
       try {
-        const response = await axios.get('https://dev.electriciansoflosangeles.com/api/auth/check')
+        const response = await axios.get('https://electriciansoflosangeles.com/api/auth/check')
 
         console.log(response.data, 'Raw response data')
 

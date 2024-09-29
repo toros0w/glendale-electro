@@ -75,11 +75,12 @@ export default {
 }
 @media (max-width: 480px) {
   .offer-container {
-    max-width: 430px;
+    max-width: 380px;
     margin-left: 0;
     margin-right: 0;
     text-align: center;
     align-items: center;
+    justify-content: center;
   }
   .offer-items-wrapper {
     flex-wrap: wrap;
@@ -96,6 +97,9 @@ export default {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .offer-item {
+    padding: 0 20px 0 20px;
   }
 }
 </style>

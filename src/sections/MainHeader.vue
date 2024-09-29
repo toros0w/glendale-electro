@@ -8,7 +8,9 @@
     <div class="header-wrapper">
       <h1 class="header-title mobile">SAFE AND SECURE</h1>
       <p class="header-text mobile">We are a Service You Can Trust</p>
-      <BtnNoneBg cls="btn-none-bg-yellow" btnText="Contact Us Now" />
+      <router-link class="contact-route" to="/contact">
+        <BtnNoneBg cls="btn-none-bg-yellow" btnText="Contact Us Now" />
+      </router-link>
       <BtnNoneBg
         cls="btn-none-bg-yellow-mobile"
         btnText="Request a Service"
@@ -51,6 +53,9 @@ export default {
 </script>
 
 <style scoped>
+.contact-route {
+  text-decoration: none;
+}
 .btn-none-bg-yellow-mobile {
   display: none;
 }

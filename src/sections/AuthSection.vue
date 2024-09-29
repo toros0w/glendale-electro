@@ -27,7 +27,7 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await axios.post(`https://dev.electriciansoflosangeles.com/api/auth`, {
+        const response = await axios.post(`https://electriciansoflosangeles.com/api/auth`, {
           username: this.username, // исправлено
           password: this.password // исправлено
         })

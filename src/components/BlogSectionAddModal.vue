@@ -75,7 +75,7 @@ export default {
 
       try {
         const response = await axios.post(
-          `https://dev.electriciansoflosangeles.com/api/posts/${blogId}/create`,
+          `https://electriciansoflosangeles.com/api/posts/${blogId}/create`,
           {
             blog_id: blogId, // Передаем blog_id вместе с остальными данными
 
