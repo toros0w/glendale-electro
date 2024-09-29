@@ -11,13 +11,14 @@
         <router-link to="/services" class="navbar-item">Services</router-link>
         <router-link to="/blogs" class="navbar-item">Blogs</router-link>
         <router-link to="/about" class="navbar-item">About</router-link>
+        <router-link to="/faq" class="navbar-item">FAQ</router-link>
         <router-link to="/contact" class="navbar-item">Contact Us</router-link>
       </div>
       <BurgerComponent class="burger" @toggle="toggleMenu" />
       <div class="info-section">
         <img src="/icons/mobile-white.svg" alt="" class="mobile-icon" />
         <div class="contact-wrapper">
-          <a class="contact-phone" href="tel:+2348100112233">+1 (414) 929-0919</a>
+          <a class="contact-phone" href="tel:+17472183267">+1 (747) 218-3267</a>
           <div class="contact-text">Call Us Anytime</div>
         </div>
       </div>
@@ -171,7 +172,7 @@ export default {
   .contact-phone {
     color: var(--white);
     text-decoration: none;
-    font-size: 12px;
+    font-size: 9px;
   }
 }
 

@@ -62,9 +62,10 @@ export default {
     justify-content: center;
   }
   .service-item-wrapper {
-    gap: 20px;
+    gap: 10px;
     display: flex;
     justify-content: center;
+    padding: 0 20px 0 0;
   }
 }
 </style>

@@ -79,10 +79,14 @@ export default {
   font-size: 16px;
   color: var(--light-gray);
   margin-top: 12px;
-  min-height: 200px;
+  height: 200px;
 }
 @media (max-width: 630px) {
   .post-img {
+    width: 150px;
+    height: 150px;
+  }
+  .img-wrapper {
     width: 150px;
     height: 150px;
   }
@@ -92,10 +96,12 @@ export default {
   }
   .post-title {
     font-size: 3vw;
+    width: 35vw;
   }
   .post-description {
     font-size: 2.5vw;
-    width: 22vw;
+    width: 35vw;
+    height: 140px;
   }
   .post-item {
   }

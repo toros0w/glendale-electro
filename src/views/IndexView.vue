@@ -54,7 +54,7 @@ export default {
     },
     checkAuth() {
       axios
-        .get('https://dev.electriciansoflosangeles.com/api/auth/check')
+        .get('https://electriciansoflosangeles.com/api/auth/check')
         .then((response) => {
           if (response.data.status === 'success') {
             this.isAuthorized = true

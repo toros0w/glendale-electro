@@ -1,11 +1,13 @@
 <template>
-  <div class="service-item">
-    <img :src="servicesData.background" alt="" class="item-img" />
-    <div class="item-btn">
-      <img :src="servicesData.icon" alt="icon" class="item-btn-icon" />
-      {{ servicesData.itemBtnText }}
+  <router-link to="/services">
+    <div class="service-item">
+      <img :src="servicesData.background" alt="" class="item-img" />
+      <div class="item-btn">
+        <img :src="servicesData.icon" alt="icon" class="item-btn-icon" />
+        {{ servicesData.itemBtnText }}
+      </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>

@@ -1,7 +1,8 @@
 <template>
   <div class="blog-container">
+    <MobileMenu :isOpen="isMenuOpen" @close="toggleMenu" />
     <TopInfo class="topinfo" />
-    <NavBar class="navbar" />
+    <NavBar class="navbar" @toggle="toggleMenu" />
     <BlogHeader :headInfo="blogMainInfo" />
     <BlogSection v-for="(item, index) in sectionsData" :key="index" :sectionData="item" />
     <BlogSectionAddModal :isOpen="isModalOpen" @close-modal="closeModal" />
@@ -14,6 +15,7 @@
 import TopInfo from '@/components/TopInfo.vue'
 import NavBar from '@/components/NavBar.vue'
 import BlogHeader from '@/sections/BlogHeader.vue'
+import MobileMenu from '@/components/MobileMenu.vue'
 import BlogSection from '@/sections/BlogSection.vue'
 import FooterSection from '@/sections/FooterSection.vue'
 import AddBlogSection from '@/components/AddBlogSection.vue'
@@ -31,7 +33,18 @@ export default {
     BlogSection,
     AddBlogSection,
     FooterSection,
-    BlogSectionAddModal
+    BlogSectionAddModal,
+    MobileMenu
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
+    }
+  },
+  data() {
+    return {
+      isMenuOpen: false
+    }
   },
   setup() {
     const route = useRoute()
@@ -47,8 +60,9 @@ export default {
 
     // Функция для проверки авторизации
     const checkAuth = async () => {
+      // https://electriciansoflosangeles.com
       try {
-        const response = await axios.get('https://dev.electriciansoflosangeles.com/api/auth/check')
+        const response = await axios.get('https://electriciansoflosangeles.com/api/auth/check')
 
         console.log(response.data, 'Raw response data')
 
@@ -72,9 +86,7 @@ export default {
     const fetchBlogData = async () => {
       const blogId = route.params.id
       try {
-        const response = await axios.get(
-          `https://dev.electriciansoflosangeles.com/api/blog/${blogId}`
-        )
+        const response = await axios.get(`https://electriciansoflosangeles.com/api/blog/${blogId}`)
         blogData.value = response.data.data
 
         // Обновляем blogMainInfo после получения данных блока
@@ -94,7 +106,7 @@ export default {
       const blogId = route.params.id
       try {
         const response = await axios.get(
-          `https://dev.electriciansoflosangeles.com/api/posts/${blogId}/sections`
+          `https://electriciansoflosangeles.com/api/posts/${blogId}/sections`
         )
         sectionsData.value = response.data.data
       } catch (error) {

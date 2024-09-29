@@ -101,18 +101,15 @@ export default {
       this.formSubmitted = true // устанавливаем флаг при отправке формы
       if (this.isFormValid()) {
         try {
-          const response = await axios.post(
-            'https://dev.electriciansoflosangeles.com/api/request',
-            {
-              customer_name: this.customer_name,
-              customer_lastname: this.customer_lastname,
-              customer_phone: this.customer_phone,
-              customer_email: this.customer_email,
-              customer_street: this.customer_street,
-              customer_zipcode: this.customer_zipcode,
-              request_text: this.request_text
-            }
-          )
+          const response = await axios.post('https://electriciansoflosangeles.com/api/request', {
+            customer_name: this.customer_name,
+            customer_lastname: this.customer_lastname,
+            customer_phone: this.customer_phone,
+            customer_email: this.customer_email,
+            customer_street: this.customer_street,
+            customer_zipcode: this.customer_zipcode,
+            request_text: this.request_text
+          })
           if (response.data.status === true && response.data.data.message !== 'error') {
             this.closeRequestModal()
           } else {
@@ -154,9 +151,9 @@ export default {
   border: 1px solid var(--t-gray);
 }
 .request-input::placeholder {
-  position: absolute;
+  /* position: absolute;
   top: 1px;
-  left: 1px;
+  left: 1px; */
   font-size: 16px;
   font-family: var(--roboto-regular);
   font-weight: var(--weight-regular);
@@ -176,7 +173,7 @@ export default {
   margin-right: auto;
   font-size: 16px;
   border: 1px solid var(--light-gray);
-  padding: 20px 3px;
+  padding: 3px 3px;
   border-radius: 5px;
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.3);
 }
@@ -247,9 +244,9 @@ export default {
 }
 
 .request-text::placeholder {
-  position: absolute;
+  /* position: absolute;
   top: 1px;
-  left: 3px;
+  left: 3px; */
   font-size: 16px;
 }
 
@@ -273,12 +270,12 @@ export default {
     height: 40px;
   }
   .request-modal-container {
-    height: 680px;
+    height: 560px;
   }
   .request-modal-inputs {
     display: grid;
     grid-template-columns: 90%;
-    grid-template-rows: 35px 35px 35px 35px 35px 35px;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px;
     row-gap: 14px;
     column-gap: 14px;
   }
@@ -306,6 +303,19 @@ export default {
   .request-btn {
     font-size: 12px;
     padding: 10px 20px;
+  }
+  .request-close-btn {
+    position: relative;
+    left: 93%;
+    top: 30px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .request-modal-inputs {
+    margin-top: 10px;
+  }
+  .request-text {
+    margin-top: 15px;
   }
 }
 </style>

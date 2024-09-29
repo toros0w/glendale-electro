@@ -8,13 +8,14 @@
     <div class="top-info-container">
       <div class="top-logo">
         <img src="/images/electro-logo.svg" alt="logo" class="logo-img" />
-        <div class="logo-text">GLENDALE ELECTRICIANS</div>
+        <!-- <div class="logo-text">GLENDALE ELECTRICIANS</div> -->
+        <router-link to="/" class="logo-text">Electricians of Los Angeles</router-link>
       </div>
       <div class="top-info-right">
         <div class="info-section">
           <img src="/icons/geo.svg" alt="location" class="gps-icon" />
           <div class="address-wrapper">
-            <div class="top-address">0012 Chiranci Street,</div>
+            <div class="top-address">213 North Glendale Ave</div>
             <div class="top-country">Glendale, CA</div>
           </div>
         </div>
@@ -22,11 +23,11 @@
           <img src="/icons/cil_mobile.svg" alt="" class="mobile-icon" />
           <div class="contact-wrapper">
             <div class="contact-text">Call Us Anytime</div>
-            <a class="contact-phone" href="tel:+2348100112233">+1 (414) 929-0919</a>
+            <a class="contact-phone" href="tel:+17472183267">+1 (747) 218-3267</a>
           </div>
         </div>
         <BtnNoneBg cls="btn-none-bg" btnText="Request A Service" @click="openRequestModal" />
-        <a class="call-us-href" href="tel:+2348100112233">
+        <a class="call-us-href" href="tel:+17472183267">
           <BtnNoneBg cls="btn-none-bg-mobile" btnText="Call Us Now" />
         </a>
       </div>

@@ -30,8 +30,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .blog-header-wrapper {
   display: flex;
@@ -69,6 +67,8 @@ export default {
 @media (max-width: 1400px) {
   .blog-header-container {
     max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (max-width: 1270px) {

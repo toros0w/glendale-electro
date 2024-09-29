@@ -6,9 +6,9 @@
       here to help with all your electrical needs.
     </div>
     <div class="info-address">
-      0012, Chiranci Street Kano, Nigeria <br />
-      electro@mailservice.com <br />
-      +2348100112233
+      213 North Glendale Ave. Glendale, CA <br />
+      info@electriciansoflosangeles.com <br />
+      +1 (747) 218-3267
     </div>
     <div class="social-items">
       <img src="/icons/facebook-black.svg" alt="" class="social-item" />

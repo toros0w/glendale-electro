@@ -7,7 +7,9 @@
           <img src="/images/post-photo.png" alt="" class="preview-img-mobile" />
         </div>
         <div class="preview-text">{{ post.text }}</div>
-        <BtnNoneBg btnText="Read More..." cls="btn-with-bg mobile" />
+        <router-link to="/about">
+          <BtnNoneBg btnText="Read More..." cls="btn-with-bg mobile" />
+        </router-link>
       </div>
     </div>
     <img src="/images/post-photo.png" alt="" class="preview-img" />
@@ -93,7 +95,8 @@ export default {
     justify-content: center;
   }
   .preview-content {
-    width: 400px;
+    width: 370px;
+    padding: 0 20px 0 0;
   }
   .preview-title {
     font-size: 26px;
