@@ -4,7 +4,7 @@
     <div class="faq-text-mobile">
       Browse our electrician FAQ section below to answer some common questions before contacting an
       electrician. If you have any lingering concerns, don’t hesitate to contact the professional
-      electricians at Glendale Electricians!
+      electricians at Electricians of Los Angeles!
     </div>
     <div v-for="(item, index) in items" :key="index" class="accordion-item">
       <div class="accordion-header" @click="toggleAccordion(index)">

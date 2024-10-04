@@ -18,19 +18,19 @@ export default {
     return {
       data: [
         {
-          text: '"Excellent service from Glendale Electricians! They upgraded our electrical panel quickly and professionally. Highly recommended!"',
+          text: '"Excellent service from Electricians of Los Angeles! They upgraded our electrical panel quickly and professionally. Highly recommended!"',
           user_photo: './images/user-1.jpg',
           user_name: 'Merry Minasyan',
           user_city: 'Glendale, CA.'
         },
         {
-          text: '"Fast and reliable! Glendale Electricians handled our emergency situation with skill and friendliness. Great job!"',
+          text: '"Fast and reliable! Electricians of Los Angeles handled our emergency situation with skill and friendliness. Great job!"',
           user_photo: './images/user-2.jpg',
           user_name: 'David Mark',
           user_city: 'Burbank, CA.'
         },
         {
-          text: '"Consistently impressive! We trust Glendale Electricians for all our electrical needs. Always professional and efficient."',
+          text: '"Consistently impressive! We trust Electricians of Los Angeles for all our electrical needs. Always professional and efficient."',
           user_photo: './images/user-3.jpg',
           user_name: 'Lee Chang',
           user_city: 'Pasadena, CA.'

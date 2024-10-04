@@ -11,10 +11,10 @@
     <div class="faq-bottom">
       <div class="bottom-text">
         We hope this electrician FAQ has helped guide you in your residential electric project.
-        Still have questions? Glendale Electricians has supplied California residents and businesses
-        with residential electrical services for over 20 years. From installations to upgrades to
-        repairs, our team of fully licensed and insured electrical technicians promises quality
-        work. Contact us today to schedule your free estimate!
+        Still have questions? Electricians of Los Angeles has supplied California residents and
+        businesses with residential electrical services for over 20 years. From installations to
+        upgrades to repairs, our team of fully licensed and insured electrical technicians promises
+        quality work. Contact us today to schedule your free estimate!
       </div>
       <ReviewComponent />
     </div>

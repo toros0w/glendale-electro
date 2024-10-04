@@ -3,7 +3,7 @@
     <div class="request-modal">
       <span class="request-close-btn" @click="closeRequestModal">&#10006;</span>
       <div class="request-modal-container">
-        <div class="request-title">Schedule Free Estimate with Glendale Electricians</div>
+        <div class="request-title">Schedule Free Estimate with Electricians of Los Angeles</div>
         <div class="request-subtitle">
           Provide your information below, and we'll contact you to schedule your FREE estimate,
           complete with an electrical design consultation and detailed cost and savings analysis!
