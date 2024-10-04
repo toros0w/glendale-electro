@@ -21,8 +21,8 @@ export default {
       content: {
         img: './images/content.jpg',
         imgMobile: './images/content-mobile.jpg',
-        title: 'Welcome to Glendale Electricians',
-        text: 'Welcome to Glendale Electricians, your trusted partner in electrical services with over 20 years of professional expertise. Our licensed electricians are dedicated to providing top-quality service for residential, commercial, and industrial projects. Founded on integrity, reliability, and excellence, we prioritize your safety and satisfaction. Our commitment to timely service and high safety standards ensures that we meet and exceed your expectations with efficient, tailored solutions. Join our many satisfied customers and experience the difference that two decades of dedication and expertise can make. Trust Glendale Electricians for all your electrical needs – where quality and service meet. We look forward to serving you and building a lasting relationship. Contact us today to see how we can help with your next project.'
+        title: 'Welcome to Electricians of Los Angeles',
+        text: 'Welcome to Electricians of Los Angeles, your trusted partner in electrical services with over 20 years of professional expertise. Our licensed electricians are dedicated to providing top-quality service for residential, commercial, and industrial projects. Founded on integrity, reliability, and excellence, we prioritize your safety and satisfaction. Our commitment to timely service and high safety standards ensures that we meet and exceed your expectations with efficient, tailored solutions. Join our many satisfied customers and experience the difference that two decades of dedication and expertise can make. Trust Electricians of Los Angeles for all your electrical needs – where quality and service meet. We look forward to serving you and building a lasting relationship. Contact us today to see how we can help with your next project.'
       }
     }
   }

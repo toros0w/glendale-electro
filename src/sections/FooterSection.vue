@@ -4,7 +4,7 @@
       <div class="footer-info">
         <div class="footer-logo">
           <img src="/images/logo-white.svg" alt="" class="logo-icon" />
-          <div class="logo-text">GLENDALE ELECTRICIANS</div>
+          <div class="logo-text">Electricians of Los Angeles</div>
         </div>
         <div class="info-text">
           With 20 years of experience, we deliver trusted electrical solutions. Let our expertise
